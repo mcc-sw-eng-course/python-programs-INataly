@@ -7,7 +7,7 @@ class Tic_Tac_Toe_Controller:
     def __init__(self):
         self.gameData = Tic_Tac_Toe.Game()
 
-    def init_players_data(self, player1str:str, player2str:str = ""):
+    def  init_players_data(self, player1str:str, player2str:str = ""):
         player1 = Tic_Tac_Toe.Player()
         player2 = Tic_Tac_Toe.Player()
         player1.playerName = player1str
@@ -22,6 +22,7 @@ class Tic_Tac_Toe_Controller:
         player2.playerShape = "O"
         self.gameData.player1 = player1
         self.gameData.player2 = player2
+        print (player1)
 
     def getPlayer1(self):
         return (self.gameData.player1.playerName)

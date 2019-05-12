@@ -48,13 +48,16 @@ class Board:
                         [0, 0, 0]]
 
 class Game:
-    STATE_GAME_OVER = 2
-    STATE_GAME_IN_COURSE = 1
     STATE_GAME_NO_STARTED = 0
+    STATE_GAME_PLAYER1_TURN = 1
+    STATE_GAME_PLAYER2_TURN = 2
+    STATE_GAME_IN_COURSE = 3
+    STATE_GAME_OVER = 4
+
 
     def __init__(self):
-        self.player1 = Player()
-        self.player2 = Player()
+        self.player1 = None
+        self.player2 = None
         self.board = Board()
         self.turns = list()
         self.gameState = Game.STATE_GAME_NO_STARTED
